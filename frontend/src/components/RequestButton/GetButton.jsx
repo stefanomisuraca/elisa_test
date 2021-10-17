@@ -1,11 +1,15 @@
 import React from 'react';
 import axios from 'axios';
+import { connect } from 'react-redux';
 
 function GetButton (props) {
 
     async function getRequest(url) {
         let response = await axios.get(url)
-        console.log(response)
+        props.dispatch({
+            type: "GET_USERS",
+            payload: response.data
+          });
     }
 
     return (
@@ -15,5 +19,7 @@ function GetButton (props) {
     )
 }
 
+const mapStateToProps = state => ({
+});
 
-export default GetButton
+export default connect(mapStateToProps)(GetButton)

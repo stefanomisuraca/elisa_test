@@ -1,8 +1,11 @@
+import makeQuery from "../db/index.js";
 
-export function userGet(req, res){
-    res.send("ASDASDASDASDASD");
+
+async function userGet(req, res){
+    let sql = "SELECT * FROM users";
+    let result = await makeQuery(sql);
+    console.log(result);
+    res.send(JSON.stringify(result));
 }
 
-export function userPost() {
-    console.log("lolollolo");
-}
+export default userGet;
