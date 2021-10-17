@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import GetButton from '../RequestButton/GetButton';
 import { connect } from 'react-redux';
 
