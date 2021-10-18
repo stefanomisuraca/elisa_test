@@ -1,9 +1,8 @@
 import Express from 'express'; 
+import userGet from "./users.js"
 
 var router = Express.Router();
 
-import userGet from "./users.js"
+router.get('/users', userGet);
 
-router.get('/users', userGet); 
-
-export default router; 
+export default router;

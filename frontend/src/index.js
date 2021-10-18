@@ -32,7 +32,9 @@ const store = createStore(reducer);
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+
     <UsersPage />
+    
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
